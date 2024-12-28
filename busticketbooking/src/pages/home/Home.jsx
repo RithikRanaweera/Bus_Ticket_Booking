@@ -1,21 +1,11 @@
 import React from 'react'
+import Hero from './hero/Hero'
 
 const Home = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen w-ful">
-            {/* Hero section */}
-            <div className="flex items-center justify-center w-full h-screen">
-                <h1 className='text-5xl font-bold text-neutral-950'>
-                    this is the Hero section
-                </h1>
-            </div>
-            {/* About */}
-            <div className="flex items-center justify-center w-full h-screen bg-neutral-950">
-                <h1 className='text-5xl font-bold text-neutral-50'>
-                    this is the About section
-                </h1>
-            </div>
-
+        <div className="w-full min-h-screen space-y-16 pd-16">
+            {/* Hero */}
+            <Hero/> 
         </div>
     )
 }
