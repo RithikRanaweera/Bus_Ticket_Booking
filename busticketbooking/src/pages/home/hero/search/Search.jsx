@@ -1,5 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion';
+import { TbArrowsExchange } from 'react-icons/tb';
+
 
 const Search = () => {
     return (
