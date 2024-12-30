@@ -54,7 +54,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between w-full h-full">
         {/*Logo section*/}
-        <Link to="/" className='text-4xl font-bold text-red-500'>
+        <Link to="/" className='text-4xl font-bold text-primary'>
           BusFinder
         </Link>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
 
             {navItems.map((item, ind) => (
               <li key={ind}>
-                <Link to={item.link} className='duration-100 ease-in-out hover:text-red-300'>
+                <Link to={item.link} className='duration-100 ease-in-out hover:text-primary'>
                   {item.label}
                 </Link>
               </li>
@@ -87,7 +87,7 @@ const Navbar = () => {
 
           {/* Button */}
           <div className='flex items-center justify-center'>
-            <button className="w-full px-6 py-2.5 btn md:w-fit md:px-4 md:py-1 bg-red-500 hover:bg-transparent border border-red-500 hover:border-red-500 md:rounded-full rounded-xl text-base font-normal text-neutral-50 hover:text-red-500 ease-in-out duration-300 ">
+            <button className="w-full px-6 py-2.5 btn md:w-fit md:px-4 md:py-1 bg-primary hover:bg-transparent border border-primary hover:border-primary md:rounded-full rounded-xl text-base font-normal text-neutral-50 hover:text-primary ease-in-out duration-300 ">
               Sign in
             </button>
           </div>

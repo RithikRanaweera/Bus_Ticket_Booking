@@ -2,6 +2,7 @@ import React from 'react'
 
 import {motion} from 'framer-motion';
 import RootLayout from '../../../layout/RootLayout';
+import Search from './search/Search';
 
 const Hero = () => {
 
@@ -44,6 +45,7 @@ const Hero = () => {
             </div>
 
             {/*Search section */}
+            <Search/>
         </RootLayout>
     </motion.div>
   )
