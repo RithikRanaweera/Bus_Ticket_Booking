@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import RootLayout from '../../layout/RootLayout';
 import Search from '../home/hero/search/Search';
 import Filter from './filter/Filter';
+import SearchResult from './searchresult/SearchResult';
 
 const Ticket = () => {
     return (
@@ -41,6 +42,7 @@ const Ticket = () => {
                    </div>
 
                    {/* search tickets */}
+                   <SearchResult/>
                    
                 </div>
 

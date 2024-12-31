@@ -153,8 +153,6 @@ const Filter = ({ className }) => {
                         </label>
                     </div>
 
-            
-
                 </div>
             </div>
 
