@@ -13,7 +13,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", link: "/" },
     { label: "Services", link: "/services" },
-    { label: "Tickets", link: "/tickets" },
+    { label: "Tickets", link: "/bus-tickets" },
     { label: "About", link: "/about" }
   ]
 
