@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Router>
-        <main className="flex flex-col w-full min-h-screen bg-neutral-50">
+        <main className="flex flex-col w-full min-h-screen gap-12 bg-neutral-50">
           {/*Navbar */}
           <Navbar/>
 
