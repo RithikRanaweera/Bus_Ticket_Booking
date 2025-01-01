@@ -8,10 +8,13 @@ import { Link } from 'react-router-dom';
 
 const TicketCard = ({ icon: Icon, busName, routeFrom, routeTo, arrivalTime, departureTime, price, availableSeats }) => {
     return (
-        <div className='w-full p-5 space-y-4 border-2 rounded-xl border-neutral-300'>
+        <div className='w-full p-5 space-y-5 border-2 rounded-xl border-neutral-300'>
+
+            {/* bus info, routes */}
             <div className="w-full pb-4 space-y-5 border-b border-neutral-300/60">
                 {/*Route*/}
-                <div className="space-y-0">
+                <div className="space-y-5">
+
                     {/* Bus Info */}
                     <div className="flex items-center justify-between w-full">
                         <div className="flex items-center gap-x-2">
@@ -84,6 +87,7 @@ const TicketCard = ({ icon: Icon, busName, routeFrom, routeTo, arrivalTime, depa
                         </div>
 
                     </div>
+
                 </div>
             </div>
 
@@ -94,6 +98,12 @@ const TicketCard = ({ icon: Icon, busName, routeFrom, routeTo, arrivalTime, depa
                     Rs. {price} <span className="text-sm font-normal text-neutral-500">
                         /per seat
                     </span>
+                </h1>
+
+                <h1 className="flex items-center justify-center text-sm font-normal text-neutral-600 gap-x-1.5">
+                    <span className="pt-0.5 text-lg font-bold text-green-700">
+                        {availableSeats}
+                    </span> seats available
                 </h1>
 
                 <Link to="/bus-tickets/detail" className="flex items-center justify-center py-1.5 px-5 text-sm font-normal duration-300 ease-in-out border-2 w-fit bg-primary hover:bg-transparent border-primary hover:border-primary rounded-xl text-neutral-50 gap-x-2 hover:text-primary ">
