@@ -10,7 +10,7 @@ const Detail = () => {
     const message = (
     <>
         One individual only can book 10 seats. If you want to book more than 10 seats, 
-        please <Link to={"/support-team"} className='text-yellow-700 font-medium'>Contact our support team.</Link>
+        please <Link to={"/support-team"} className='font-medium text-yellow-700'>Contact our support team.</Link>
     </>
     );
     
@@ -24,7 +24,7 @@ const Detail = () => {
         title={"Bus Details"}
     />
 
-    <RootLayout className="space-y-12 w-full pb-16">
+    <RootLayout className="w-full pb-16 space-y-12">
 
         {/* Seat layout and selection action detail*/}
         <div className="w-full space-y-8">
@@ -35,7 +35,7 @@ const Detail = () => {
         </div>
 
         {/* Bus details */}
-        <div className="w-full flex items-center justify-center flex-col gap-8 text-center"></div>
+        <div className="flex flex-col items-center justify-center w-full gap-8 text-center"></div>
 
     </RootLayout>
       
