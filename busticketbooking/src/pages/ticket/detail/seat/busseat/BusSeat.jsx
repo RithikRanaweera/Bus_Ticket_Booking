@@ -3,6 +3,7 @@ import { GiSteeringWheel } from 'react-icons/gi';
 import busSeatData from '../../../../../constants/busseat/BusSeatData';
 import { MdOutlineChair } from 'react-icons/md';
 import { RiMoneyRupeeCircleLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 
 const BusSeat = () => {
@@ -60,7 +61,7 @@ const BusSeat = () => {
 
     return (
         <div className="grid w-full grid-cols-5 gap-10">
-            
+
             {/* Seat Layout */}
             <div className="flex items-center justify-center w-full col-span-3 p-4 border shadow-sm rounded-xl border-neutral-200">
 
@@ -168,30 +169,30 @@ const BusSeat = () => {
 
                     {/* reservation info */}
                     <div className="flex items-center justify-center w-full gap-6 pt-5 border-t border-neutral-200">
-                        
+
                         <div className="flex items-center gap-x-2">
-                            <MdOutlineChair className='text-xl -rotate-90 text-neutral-500'/>
+                            <MdOutlineChair className='text-xl -rotate-90 text-neutral-500' />
                             <p className="text-sm font-medium text-neutral-500">
                                 Available
                             </p>
                         </div>
 
                         <div className="flex items-center gap-x-2">
-                            <MdOutlineChair className='text-xl -rotate-90 text-primary'/>
+                            <MdOutlineChair className='text-xl -rotate-90 text-primary' />
                             <p className="text-sm font-medium text-neutral-500">
                                 Booked
                             </p>
                         </div>
 
                         <div className="flex items-center gap-x-2">
-                            <MdOutlineChair className='text-xl text-yellow-600 -rotate-90'/>
+                            <MdOutlineChair className='text-xl text-yellow-600 -rotate-90' />
                             <p className="text-sm font-medium text-neutral-500">
                                 Selected
                             </p>
                         </div>
 
                         <div className="flex items-center gap-x-2">
-                            <RiMoneyRupeeCircleLine className='text-xl text-neutral-500'/>
+                            <RiMoneyRupeeCircleLine className='text-xl text-neutral-500' />
                             <p className="text-sm font-medium text-neutral-500">
                                 Rs. 180
                             </p>
@@ -205,7 +206,132 @@ const BusSeat = () => {
 
             {/* Seat selection action */}
             <div className="w-full col-span-2 px-6 py-4 space-y-5 border shadow-sm bg-neutral-50 rounded-xl border-neutral-200">
-                
+
+                <div className="w-full space-y-2">
+                    <div className="flex items-center justify-between w-full">
+                        <h1 className="text-lg font-medium text-neutral-600">
+                            Your Destination
+                        </h1>
+                        <Link to={"/bus-tickets"} className='text-sm font-normal text-primary'>
+                            Change route
+                        </Link>
+                    </div>
+
+                    <div className="space-y-0.5 w-full">
+                        <div className="flex items-center justify-between w-full gap-x-5">
+                            <p className="text-sm font-normal text-neutral-400">
+                                From <span className="text-xs">(New Buspark)</span>
+                            </p>
+                            <p className="text-sm font-normal text-neutral-400">
+                                To <span className="text-xs">(Chankchaken)</span>
+                            </p>
+                        </div>
+
+                        <div className="flex items-center justify-between w-full gap-x-4">
+
+                            <h1 className="text-sm font-normal text-neutral-600">
+                                Matara <span className="font-medium">(06:15pm)</span>
+                            </h1>
+
+                            <div className="flex-1 border border-dashed border-neutral-300" />
+
+                            <h1 className="text-sm font-normal text-neutral-600">
+                                Galle <span className="text-sm font-medium">(07:35pm)</span>
+                            </h1>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div className="w-full space-y-2">
+                    <div className="flex items-center justify-between w-full">
+                        <h1 className="text-lg font-medium text-neutral-600">
+                            Selected Seats
+                        </h1>
+
+                        <div className="px-1.5 py-0.5 text-xs font-normal uppercase rounded-lg bg-primary/20 text-neutral-600">
+                            Non-refundable
+                        </div>
+                    </div>
+
+                    {
+                        selectedSeats.length > 0
+                            ?
+                            <div className="flex items-center w-full gap-x-3">
+                                {selectedSeats.map((seatId) => {
+                                    return (
+                                        <div key={seatId} className='flex items-center justify-center text-base font-semibold rounded-lg w-9 h-9 bg-neutral-200/80 text-neutral-700 '>
+                                            {seatId}
+                                        </div>
+                                    )
+                                })
+
+                                }
+                            </div>
+                            :
+                            <div className="flex items-center w-full gap-x-3">
+                                <p className="text-sm font-normal text-neutral-500">
+                                    No seat selected
+                                </p>
+                            </div>
+                    }
+
+                </div>
+
+
+                <div className="w-full space-y-2">
+                    <h1 className="text-lg font-medium text-neutral-600">
+                        Fare Details
+                    </h1>
+
+                    <div className="flex items-center justify-between w-full border-dashed border-l-[1.5px] border-neutral-400 pl-2">
+                        <h3 className="text-sm font-medium text-neutral-500">
+                            Basic Fare:
+                        </h3>
+                        <p className="text-sm font-medium text-neutral-600"></p>
+                    </div>
+
+                    <div className="flex items-center justify-between gap-x-4">
+                        <div className="flex gap-y-0.5 flex-col">
+                            <h3 className="text-base font-medium text-neutral-500">Total Price:</h3>
+                            <span className="text-xs font-normal text-neutral-500">
+                                (Including all taxes)
+                            </span>
+                        </div>
+                        {/* Calculate the total price */}
+                        <p className="text-base font-semibold text-neutral-600">
+                            Rs {" "}
+                            {selectedSeats.reduce((total, seatId) => {
+                                const seat = busSeatData.find(busSeat => busSeat.id === seatId);
+                                return total + (seat ? seat.price : 0);
+                            }, 0)}
+                        </p>
+                    </div>
+                </div>
+
+
+                <div className="flex items-center justify-center w-full">
+                    {
+                        selectedSeats.length > 0
+                            ?
+                            <Link to="/bus-tickets/checkout" className='w-full text-sm font-normal bg-primary hover:bg-primary/90 text-neutral-50 py-2.5 flex items-center justify-center uppercase rounded-lg transition'>
+                                Processed to CheckOut
+                            </Link>
+                            :
+                            <div className='w-full space-y-0.5' >
+                                <button disabled className='w-full text-sm font-normal bg-primary hover:bg-primary/90 text-neutral-50 py-2.5 flex items-center justify-center uppercase rounded-lg transition cursor-not-allowed'>
+                                    Processed to CheckOut
+                                </button>
+                                <small className="px-1 text-xs font-normal text-neutral-600">
+                                    Please select at least one seat to proceed to checkout page.
+                                </small>
+                            </div>
+                    }
+                </div>
+
             </div>
             {/* Show the error message if more than 10 seats are selected */}
         </div>
