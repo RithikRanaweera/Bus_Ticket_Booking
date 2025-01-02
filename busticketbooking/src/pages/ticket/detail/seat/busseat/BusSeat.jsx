@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { GiSteeringWheel } from 'react-icons/gi';
 import busSeatData from '../../../../../constants/busseat/BusSeatData';
 import { MdOutlineChair } from 'react-icons/md';
+import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 
 
 const BusSeat = () => {
@@ -59,6 +60,7 @@ const BusSeat = () => {
 
     return (
         <div className="grid w-full grid-cols-5 gap-10">
+            
             {/* Seat Layout */}
             <div className="flex items-center justify-center w-full col-span-3 p-4 border shadow-sm rounded-xl border-neutral-200">
 
@@ -166,15 +168,44 @@ const BusSeat = () => {
 
                     {/* reservation info */}
                     <div className="flex items-center justify-center w-full gap-6 pt-5 border-t border-neutral-200">
-                                    
+                        
+                        <div className="flex items-center gap-x-2">
+                            <MdOutlineChair className='text-xl -rotate-90 text-neutral-500'/>
+                            <p className="text-sm font-medium text-neutral-500">
+                                Available
+                            </p>
+                        </div>
+
+                        <div className="flex items-center gap-x-2">
+                            <MdOutlineChair className='text-xl -rotate-90 text-primary'/>
+                            <p className="text-sm font-medium text-neutral-500">
+                                Booked
+                            </p>
+                        </div>
+
+                        <div className="flex items-center gap-x-2">
+                            <MdOutlineChair className='text-xl text-yellow-600 -rotate-90'/>
+                            <p className="text-sm font-medium text-neutral-500">
+                                Selected
+                            </p>
+                        </div>
+
+                        <div className="flex items-center gap-x-2">
+                            <RiMoneyRupeeCircleLine className='text-xl text-neutral-500'/>
+                            <p className="text-sm font-medium text-neutral-500">
+                                Rs. 180
+                            </p>
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
+
             {/* Seat selection action */}
             <div className="w-full col-span-2 px-6 py-4 space-y-5 border shadow-sm bg-neutral-50 rounded-xl border-neutral-200">
-
+                
             </div>
             {/* Show the error message if more than 10 seats are selected */}
         </div>
