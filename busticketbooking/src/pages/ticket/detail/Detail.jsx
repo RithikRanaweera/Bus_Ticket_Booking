@@ -3,6 +3,7 @@ import RootLayout from '../../../layout/RootLayout'
 import WarningAlert from '../../../components/alertmessage/WarningAlert'
 import { Link } from 'react-router-dom'
 import TopLayout from '../../../layout/toppage/TopLayout'
+import BusSeat from './seat/busseat/BusSeat'
 
 const Detail = () => {
 
@@ -31,7 +32,10 @@ const Detail = () => {
 
             {/* Warning message */}
             <WarningAlert message={message} />
-            {/* Seet layout */}
+
+            {/* Seat layout */}
+            <BusSeat/>
+
         </div>
 
         {/* Bus details */}
