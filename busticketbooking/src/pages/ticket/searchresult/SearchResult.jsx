@@ -16,7 +16,7 @@ const SearchResult = () => {
         <TicketCard icon={FaBus} busName={"CTB Bus"} routeFrom={"Matara"} routeTo={"Galle"} arrivalTime={"10:00 AM"} departureTime={"11:30 AM"} price={"180"} availableSeats={"15"} />
         <TicketCard icon={FaBus} busName={"CTB Bus"} routeFrom={"Matara"} routeTo={"Galle"} arrivalTime={"10:00 AM"} departureTime={"11:30 AM"} price={"180"} availableSeats={"15"} />
         <TicketCard icon={FaBus} busName={"CTB Bus"} routeFrom={"Matara"} routeTo={"Galle"} arrivalTime={"10:00 AM"} departureTime={"11:30 AM"} price={"180"} availableSeats={"15"} />
-        
+
       </div>
 
       <div className="flex items-center justify-center w-full">
