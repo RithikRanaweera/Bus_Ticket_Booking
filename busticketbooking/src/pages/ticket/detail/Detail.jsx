@@ -7,6 +7,7 @@ import BusSeat from './seat/busseat/BusSeat'
 import ToggleBtn from '../../../components/togglebtn/ToggleBtn'
 import Amenities from './amenities/Amenities'
 import ReservationPolicy from './reservationpolicy/ReservationPolicy'
+import BusImage from './busimage/BusImage'
 
 
 const Detail = () => {
@@ -76,6 +77,7 @@ const Detail = () => {
 
                         </div>
                         {/* bus images */}
+                        <BusImage /> 
                     </div>
 
                 </ToggleBtn>
