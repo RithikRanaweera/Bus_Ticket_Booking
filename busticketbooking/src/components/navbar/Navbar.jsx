@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import { FaX } from "react-icons/fa6";
 
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [open, setOpen] = useState(false);
@@ -87,7 +87,7 @@ const Navbar = () => {
 
           {/* Button */}
           <div className='flex items-center justify-center'>
-            <button className="w-full px-6 py-2.5 btn md:w-fit md:px-4 md:py-1 bg-primary hover:bg-transparent border border-primary hover:border-primary md:rounded-full rounded-xl text-base font-normal text-neutral-50 hover:text-primary ease-in-out duration-300 ">
+            <button className="w-full px-6 py-2.5 btn md:w-fit md:px-4 md:py-1 bg-primary hover:bg-transparent border border-primary hover:border-primary md:rounded-full rounded-xl text-base font-normal text-neutral-50 hover:text-primary ease-in-out duration-300 " onClick={() => setShowLogin(true)}>
               Sign in
             </button>
           </div>
