@@ -6,6 +6,7 @@ import TopLayout from '../../../layout/toppage/TopLayout'
 import BusSeat from './seat/busseat/BusSeat'
 import ToggleBtn from '../../../components/togglebtn/ToggleBtn'
 import Amenities from './amenities/Amenities'
+import ReservationPolicy from './reservationpolicy/ReservationPolicy'
 
 
 const Detail = () => {
@@ -70,7 +71,8 @@ const Detail = () => {
                             {/* Amenities */}
                             <Amenities/>
 
-                            {/*Rreservation policy */}
+                            {/* Reservation policy */}
+                            <ReservationPolicy/>
 
                         </div>
                         {/* bus images */}
