@@ -4,6 +4,10 @@ import busSeatData from '../../../../../constants/busseat/BusSeatData';
 import { MdOutlineChair } from 'react-icons/md';
 import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import ErrorMessage from '../../../../../components/alertmessage/errormsg/ErrorMessage';
+
+
+
 
 
 const BusSeat = () => {
@@ -334,6 +338,9 @@ const BusSeat = () => {
 
             </div>
             {/* Show the error message if more than 10 seats are selected */}
+
+            {showError && <ErrorMessage message={"You can't select more than 10 seats."} />}
+
         </div>
     )
 }
