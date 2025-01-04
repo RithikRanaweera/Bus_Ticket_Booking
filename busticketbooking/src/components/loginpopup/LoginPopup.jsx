@@ -46,9 +46,11 @@ const LoginPopup = ({ setShowLogin }) => {
                         required
                     />
                 </div>
-                <button className="p-4 font-medium text-white rounded-md bg-primary">
+
+                <button className="flex items-center justify-center w-full text-base font-medium duration-300 ease-in-out border-2 rounded-md h-[38px] bg-primary hover:bg-transparent border-primary hover:border-primary text-neutral-50 gap-x-2 hover:text-primary ">
                     {currState === "Sign Up" ? "Create account" : "Login"}
                 </button>
+
                 <div className="flex items-baseline gap-2">
                     <input type="checkbox" required />
                     <p>By continuing, I agree to the terms of use & privacy policy.</p>
