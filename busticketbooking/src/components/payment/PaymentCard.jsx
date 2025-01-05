@@ -11,9 +11,10 @@ const PaymentCard = ({
 }) => {
   return (
     <label
-      className={`w-full flex items-end px-4 py-2 border-2 ${
-        selectedPayment === value ? 'border-indigo-500/80 bg-indigo-500/15' : 'border-neutral-300 bg-neutral-100/40'
-      } rounded-xl relative cursor-pointer`}
+      className={`w-full flex items-end px-4 py-2 border-2 ${selectedPayment === value
+          ? 'border-indigo-500/80 bg-indigo-500/15'
+          : 'border-neutral-300 bg-neutral-100/40'
+        } rounded-xl relative cursor-pointer`}
     >
       <div className="w-full flex items-center justify-between gap-7">
         <div className="flex items-center gap-x-3">
@@ -21,7 +22,7 @@ const PaymentCard = ({
             <img
               src={cardImage}
               alt="payment img"
-              className="w-full object-contain object-center rounded-lg"
+              className="w-full h-full object-contain object-center rounded-lg"
             />
           </div>
 
@@ -37,7 +38,7 @@ const PaymentCard = ({
           {selectedPayment === value ? (
             <IoMdRadioButtonOn className="w-7 h-7 text-indigo-500" />
           ) : (
-            <IoMdRadioButtonOff className="w-7 h-7" />
+            <IoMdRadioButtonOff className="w-7 h-7 text-neutral-500" />
           )}
         </div>
       </div>
