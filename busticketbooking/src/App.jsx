@@ -7,6 +7,7 @@ import Ticket from "./pages/ticket/Ticket"
 import Detail from "./pages/ticket/detail/Detail"
 import { useState } from "react"
 import LoginPopup from "./components/loginpopup/LoginPopup"
+import Checkout from "./pages/ticket/checkout/Checkout"
 
 function App() {
 
@@ -25,6 +26,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/bus-tickets" element={<Ticket />} />
+            <Route path="/bus-tickets/checkout" element={<Checkout />} />
+
 
             {/* Ticket detail */}
             <Route path="/bus-tickets/detail" element={<Detail />} />
