@@ -2,6 +2,8 @@ import React from 'react'
 import TopLayout from '../../../layout/toppage/TopLayout'
 import RootLayout from '../../../layout/RootLayout'
 import PassengerData from './passengerdata/PassengerData'
+import BookingStatus from './bookingstatus/BookingStatus';
+
 
 const Checkout = () => {
   return (
@@ -18,6 +20,8 @@ const Checkout = () => {
           {/* Passenger Detail */}
           <PassengerData />
           {/* Ticket Report Status */}
+          <BookingStatus />
+
         </div>
       </RootLayout>
 

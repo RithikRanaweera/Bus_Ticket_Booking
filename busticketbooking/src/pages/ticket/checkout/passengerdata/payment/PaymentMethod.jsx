@@ -3,6 +3,7 @@ import PaymentCard from '../../../../../components/payment/PaymentCard'
 
 import MasterCardImg from '../../../../../assets/mastercard.png'
 import CreditCardImg from '../../../../../assets/creditcard.png'
+import { FaPlus } from 'react-icons/fa';
 
 const PaymentMethod = () => {
 
@@ -38,7 +39,13 @@ const PaymentMethod = () => {
             />
         </div>
 
-        <div className="w-full flex justify-end"></div>
+        <div className="w-full flex justify-end">
+            <div className="w-fit flex flex-item-center justify-center gap-x-2 
+            cursor-pointer text-base font-normal text-primary ">
+                <FaPlus />
+                <p className="capitalize">Add new card</p>
+            </div>
+        </div>
       
     </div>
   )

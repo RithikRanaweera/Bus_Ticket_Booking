@@ -295,7 +295,9 @@ const BusSeat = () => {
                         <h3 className="text-sm font-medium text-neutral-500">
                             Basic Fare:
                         </h3>
-                        <p className="text-sm font-medium text-neutral-600"></p>
+                        <p className="text-sm font-medium text-neutral-600">
+                           NPR. 1600 
+                        </p>
                     </div>
 
                     <div className="flex items-center justify-between gap-x-4">
